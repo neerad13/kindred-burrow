@@ -1,0 +1,238 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        url("poku.jpg"),
+        url("pup.jpg"),
+        url("cocatoo.jpg"),
+        url("turtle.jpg"),
+        url("pup.jpg"),
+        url("poku.jpg");
+    background-size: 33.33% 50%;
+    background-position:
+        0% 0%,
+        50% 0%,
+        100% 0%,
+        0% 100%,
+        50% 100%,
+        100% 100%;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+.hero h1 i {
+    font-style: italic;
+    color: #ffcc70;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: linear-gradient(to right, #c96b2c, #7a3e2b);
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+body {
+    text-align: center;
+    background: linear-gradient(to right, #f7e6d5, #fdf1e6);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3e2c23;
+    margin: 0;
+    padding: 0px;
+}
+
+h1 { color: #5a2e1f; }
+h2 { color: #7a3e2b; }
+h3 { color: #6b3e26; }
+.card {
+    background-color: #fdf3e6;
+    border: 2px solid #d2691e;
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fffaf5;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #c47a3a;
+    padding: 15px;
+}
+
+th {
+    background: linear-gradient(to right, #c96b2c, #8b4513);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #fdf1e6;
+}
+
+form {
+    background-color: #fffaf5;
+    display: inline-block;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #e6c7a8;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+input[type="text"], select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid #c9a07a;
+}
+
+input[type="submit"], button {
+    background: linear-gradient(to right, #c96b2c, #7a3e2b);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: #5a2e1f;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #fff3e6;
+    padding: 20px;
+    border-left: 8px solid #c96b2c;
+    margin: 20px auto;
+}
+
+.pet-name-style {
+    color: #5a2e1f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.pet-photo {
+    padding: 5px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.pet-photo:hover {
+    transform: scale(2);
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    background-color: #c96b2c;
+    color: white;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 11px;
+    border-radius: 3px;
+}
+
+.move-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(to right, #c96b2c, #7a3e2b);
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 10px;
+    animation: slide 3s infinite alternate;
+}
+
+canvas {
+    background-color: #fffaf5;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    from { transform: translateX(-150px); }
+    to { transform: translateX(150px); }
+}
+h3::before {
+    content: "🐾 ";
+    margin-right: 8px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.inner-box {
+    background-color: #fff4e6;
+    padding: 20px;
+    border-radius: 12px;
+}

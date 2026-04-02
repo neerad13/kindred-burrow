@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    font-family: Segoe UI;
+    background-color: #2b1d17;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 25px;
+    background-color: #5a3b2e;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav a {
+    color: #fff5e6;
+    margin-left: 25px;
+    text-decoration: none;
+    color: #f5e6d8;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #ffb347;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+    <div class="logo">
+        THE KINDRED BURROW
+    </div>
+
+    <div class="nav">
+<a href="main.html#about" target="content">About</a>
+<a href="main.html#process" target="content">Process</a>
+<a href="main.html#faq" target="content">FAQ</a>
+<a href="main.html#pets" target="content">Pets</a>
+<a href="main.html#journey" target="content">Start</a>
+<a href="main.html#reviews" target="content">Reviews</a>
+    </div>
+
+</div>
+<script>
+function goToSection(id) {
+    var frame = parent.frames["content"];
+
+    if(frame && frame.document) {
+        var element = frame.document.getElementById(id);
+
+        if(element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            alert("Section not found");
+        }
+    } else {
+        alert("Frame not loaded properly");
+    }
+}
+</script>
+</body>
+</html>
